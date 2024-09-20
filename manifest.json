@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Channel Blocker",
+    "version": "1.0",
+    "description": "Blocks YouTube videos from specified channels.",
+    "permissions": [
+      "storage",
+      "https://www.youtube.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content_script.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "options_page": "options.html"
+  }
+  
